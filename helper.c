@@ -59,3 +59,12 @@ int print_integer(int n)
 	}
 	return (count);
 }
+/**
+ * handle_error - handle the appropriate errors
+ *
+ * Return: -1
+ */
+int handle_error(void)
+{
+	return (-1);
+}
