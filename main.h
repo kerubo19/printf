@@ -10,5 +10,5 @@
 int _putchar(char c);
 int print_string(char *s);
 int _printf(const char *format, ...);
-
+int print_integer(int n);
 #endif

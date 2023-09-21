@@ -25,3 +25,29 @@ int print_string(char *s)
 	}
 	return (i);
 }
+
+/**
+ * print_integer - prints an integer
+ * @n: integer
+ *
+ * Return: integer
+ */
+int print_integer(int n)
+{
+	int count = 0, divisor = 1, digit;
+
+	if (n < 0)
+	{
+		count += _putchar('-');
+		n = -n;
+	}
+	while (n / divisor >= 10)
+		divisor *= 10;
+	while (divisor != 0)
+	{
+		digit = (n / divisor) % 10;
+		count += _putchar('0' + digit);
+		divisor /= 10;
+	}
+	return (count);
+}
