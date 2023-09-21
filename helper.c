@@ -14,7 +14,13 @@ int print_string(char *s)
 		s = "(null)";
 	while (s[i])
 	{
-		_putchar(s[i]);
+		if (s[i] == '\0')
+		{
+			_putchar('\\');
+			_putchar('0');
+		}
+		else
+			_putchar(s[i]);
 		i++;
 	}
 	return (i);
