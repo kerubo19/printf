@@ -34,12 +34,20 @@ int print_string(char *s)
  */
 int print_integer(int n)
 {
-	int count = 0, divisor = 1, digit;
+	int count = 0;
+	int divisor = 1;
+	int digit;
 
 	if (n < 0)
 	{
 		count += _putchar('-');
-		n = -n;
+		if (n == INT_MIN)
+		{
+			n = -(n + 1);
+			count += 1;
+		}
+		else
+			n = -n;
 	}
 	while (n / divisor >= 10)
 		divisor *= 10;
