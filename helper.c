@@ -68,3 +68,23 @@ int handle_error(void)
 {
 	return (-1);
 }
+/**
+ * print_binary - handles the specifier %b
+ * @n: number
+ *
+ * Return: binary
+ */
+int print_binary(unsigned int n)
+{
+	int count = 0, i;
+	int binary[32];
+
+	for (i = 31; i >= 0; i--)
+	{
+		binary[i] = n % 2;
+		n /= 2;
+	}
+	for (i = 0; i < 32; i++)
+		count += _putchar('0' + binary[i]);
+	return (count);
+}

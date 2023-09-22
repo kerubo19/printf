@@ -12,4 +12,5 @@ int print_string(char *s);
 int _printf(const char *format, ...);
 int print_integer(int n);
 int handle_error(void);
+int print_binary(unsigned int n);
 #endif

@@ -30,6 +30,9 @@ int _printf(const char *format, ...)
 				case 'i':
 					count += print_integer(va_arg(args, int));
 					break;
+				case 'b':
+					count += print_binary(va_arg(args, unsigned int));
+					break;
 				case '%':
 					count += _putchar('%');
 					break;
@@ -40,9 +43,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			count += _putchar(format[i]);
-		}
 		i++;
 	}
 	va_end(args);
